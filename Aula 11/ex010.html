@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detras</title>
+</head>
+<body>
+        <h1>Sistemas de multas</h1>
+        Velocidade do carro:<input type="number" name="mult" id="mult">
+        km/h<input type="button" value="calcular" onclick="calcular()">
+        <div id="res">
+
+        </div>
+        
+        <script>
+
+            function calcular() {
+                var mult = document.getElementById('mult')
+                var res = document.getElementById('res')
+                velo = Number(mult.value)
+                res.innerHTML = `<p>A sua velociadade é de <strong>${velo}km/h</strong></p>`
+                if(velo > 60) {
+                    res.innerHTML += `<p>Você passou do limite de velocidade. <strong>Multado!</strong></p>`
+                }
+                res.innerHTML += `Dirija sempre com o cinto de segurança`
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event DOM</title>
+    <style>
+        div#zona {
+            font: normal 1.2em monospace;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+        <div id="zona">Interaja...</div>
+        <script>
+            var zona = document.getElementById('zona')
+            zona.addEventListener('click', clicar)
+            zona.addEventListener('mouseenter', entrar)
+            zona.addEventListener('mouseout', sair)
+            
+            function clicar() {
+            zona.innerText = 'Clicou!'
+            zona.style.background = 'red'
+            }
+
+            function entrar() {
+                zona.innerText = 'Entrou!'
+            }
+
+            function sair() {
+                zona.innerText = 'Saiu!'
+                zona.style.background = 'green'
+            }
+        </script>
+</body>
+</html>

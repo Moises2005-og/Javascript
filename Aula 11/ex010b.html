@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Estrangeiro ou angolano</h1>
+        País de origem: <input type="text" name="txt" id="txt">
+        <input type="button" value="verificar" onclick="calcular()">
+        <div id="resul">
+
+        </div>
+
+        <script>
+            function calcular() {
+                var txt = document.getElementById('txt')
+                var resul = document.getElementById('resul')
+                var country = String(txt.value) 
+                resul.innerHTML = `<p>Você vive em ${country}<p>`
+                if (country == "Angola") {
+                    resul.innerHTML += `<p>Você é angolano</p>`
+                } else {
+                    resul.innerHTML += `<p>Você é estrangeiro</p>`
+                }
+            }
+        </script>
+</body>
+</html>
